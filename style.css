@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+   margin: 0;
+   padding: 0; 
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* SECTIONS */
+
+section {
+    padding-top: 4vh;
+    box-sizing: border-box;
+}
+
+/* HOME SECTION */
+
+#home {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* DESKTOP NAV LAVALAMP NAVIGATION MENU */
+
+nav {
+    margin: 0px;
+    position: fixed;
+    left: 50%;
+    width: 470px;
+    height: 50px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)); /* Gradient with semi-transparent white */
+    border-radius: 8px;
+    font-size: 0; /* Ensures no additional spacing or text alignment issues */
+    z-index: 1000; /* Added a high z-index to ensure the menu stays on top of other content */
+    transform: translateX(-50%); /* Adjusts the centering to account for the menu's width */
+    backdrop-filter: blur(10px); /* Adds a blur effect to the background behind the nav */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: Add a subtle border */
+}
+
+
+nav a {
+    line-height: 50px; /* Vertically centers the text within the menu items */
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase; /* Makes the text uppercase */
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s; /* Smooth transition for hover effect */
+    border-radius: 8px; /* Matches the border radius of the nav container */
+}
+
+/* Width and color assignments for each menu item */
+a:nth-child(1) {
+    width: 100px;
+}
+a:nth-child(2) {
+    width: 110px;
+}
+a:nth-child(3) {
+    width: 100px;
+}
+a:nth-child(4) {
+    width: 160px;
+}
+
+
+/* Start positions and hover animations */
+nav .start-home, a:nth-child(1):hover ~ .animation {
+    width: 100px;
+    left: 0;
+    background-color: #7BBF7A; /* Color for the "Home" section */
+}
+nav .start-about, a:nth-child(2):hover ~ .animation {
+    width: 110px;
+    left: 100px;
+    background-color: #7BBF7A; /* Color for the "About" section */
+}
+nav .start-blog, a:nth-child(3):hover ~ .animation {
+    width: 100px;
+    left: 210px;
+    background-color: #7BBF7A; /* Color for the "services" section */
+}
+nav .start-contact, a:nth-child(4):hover ~ .animation {
+    width: 160px;
+    left: 310px;
+    background-color: #7BBF7A; /* Color for the "contact" section */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: black;
+}
+
+a:hover{
+    color: black;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(9, 9, 9);
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+hamburger-icon span:first-child {
+    transform: none;
+}
+
+hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+
+/* Home section logo styling */
+.logo-container {
+    position: absolute;
+    top: 20px; /* Adjust based on where you want the logo */
+    left: 20px; /* Adjust based on where you want the logo */
+    z-index: 2; /* Ensure the logo is above the background image */
+}
+
+.home-logo {
+    width: 200px; /* Adjust size to fit your design */
+    height:auto; /* Maintain aspect ratio */
+}
+
+.logo-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -140%);
+}
+
+.text-container {
+    position: absolute;
+    top: 40%; /* Adjust based on where you want the text */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Center it both horizontally and vertically */
+    z-index: 2; /* Ensure the text is above the background image */
+}
+
+.section_text_p1 {
+    color: white; /* Ensure the text contrasts against the background */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0.5rem 0; /* Add some spacing between the lines */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle black shadow */
+    font-family: serif; /* Apply a generic serif typeface */
+}
+
+.section_text_p2 {
+    color: white; /* Ensure the text contrasts against the background */
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 100;
+    margin: 0.2rem 1; /* Add some spacing between the lines */
+    text-shadow: .5px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle black shadow */
+    font-family: serif; /* Apply a generic serif typeface */
+}
+
+/*ABOUT SECTION */
+
+#about {
+    position: relative;
+    background-color: rgb(225, 237, 239); /* Set the background color to white */
+    width: 100%; /* Ensure the section takes up the full width of the viewport */
+    height: 50%;
+    margin: 0; /* Remove any default margin */
+    padding: 2rem; /* Add some padding if needed for spacing */
+
+}
+
+.section_text_p3 {
+    color: black; /* Ensure the text contrasts against the background */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 3rem 0; /* Add some spacing between the lines */
+    font-family: serif; /* Apply a generic serif typeface */
+}
+
+/* Centered and compressed text block */
+.section_text_p4 {
+    color: black;
+    font-size: 1rem;
+    text-align:justify;
+    font-weight: 100;
+    margin: 4.2rem auto; /* Center the text block */
+    font-family: serif;
+    max-width: 1200px; /* Limit the width of the text block */
+    padding: 0 1rem; /* Add padding inside the text block */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers, 
+.about-details-container {
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rerm;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+.section-container{
+    gap: 4rem;
+    height: 80%;
+}
+
+.section_pic-container {
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+/* SERVICES SECTION */
+
+#services {
+    padding: 10px 10px;
+    background-color: transparent;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    position: relative;
+    width: 500px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 34px 38px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s ease; /* Add transition for the zoom effect */
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.service-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 375px;
+    transition: transform 0.5s ease; /* Smooth zoom transition for the image */
+}
+
+.service-item:hover img {
+    transform: scale(1.1); /* Slightly zoom the image on hover */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.service-item:hover .overlay {
+    opacity: 1;
+}
+
+.service-name {
+    font-family: serif;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7); /* Subtle black shadow */
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.service-item .service-name {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Aligns the text to the center */
+    color: white;
+    background-color: transparent;
+    padding: 5px 10px;
+    font-size: 25px;
+    max-width: 90%;
+    box-sizing: border-box;
+    z-index: 2;
+    font-family: serif;
+    font-weight: 700;
+    text-align: center; /* Ensure the text is centered */
+}
+
+@media (max-width: 600px) {
+    .service-item {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .service-item img {
+        height: auto;
+    }
+}
+
+/* CONTACT SECTION */
+
+#contact {
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button.btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7BBF7A;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #6aa969;
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p {
+    font-size: larger;
+}
+
+.contact-icon {
+    cursor: default;
+}
+
+.email-icon {
+    height: 2.5rem;
+}
+.phone-icon {
+    height: 2.5rem;
+}
+
+/* FOOTER */
+
+footer {
+    height: 26vh;
+    margin: 0 1rem;
+}
+
+footer p {
+    text-align: center;
+}

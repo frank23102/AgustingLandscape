@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicos Landscape</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <!-- LAVALAMP NAVIGATION MENU -->
+    <nav id="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home">
+        <div class="background-image">
+            <img src="./assets/HomepageImage.jpg" alt="background-image">
+        </div>
+        <div class="logo-container">
+            <img src="./assets/logo.png" alt="Logo" class="home-logo">
+        </div>
+        <div class="text-container">
+            <p class="section_text_p1">NICOS LANDSCAPE</p>
+            <p class="section_text_p2">Shaping Nature, Creating Beauty</p>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h1 class="section_text_p3">About Us</h1>
+        <p class="section_text_p4">
+            Welcome to Nicos Landscape! My name is Nico, and as the owner and operator, I bring years of experience and a deep passion for creating beautiful outdoor spaces. At Nicos Landscape, I’m dedicated to delivering personalized, high-quality landscaping services that reflect your unique vision. Whether it's designing lush gardens, maintaining pristine lawns, or crafting inviting outdoor living areas, I handle every detail with care and professionalism. My commitment to excellence means that you can count on reliable service, clear communication, and results that exceed your expectations. Thank you for considering Nicos Landscape—I look forward to helping you transform your outdoor space into something truly special.
+        </p>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services">
+        <h1 class="section_text_p3">Our Services</h1>
+        <div class="services-container">
+            <!-- Service: Landscaping -->
+            <div class="service-item">
+                <div class="service-name">Landscaping</div>
+                <img src="./assets/landscaping1.jpg" alt="Landscaping Service" class="service-photo">
+                <div class="overlay">
+                    <p class="service-description">Transform your outdoor space with expert landscaping services.</p>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://example.com/landscaping'">
+                        more info
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service: Hardscaping -->
+            <div class="service-item">
+                <div class="service-name">Hardscaping</div>
+                <img src="./assets/hardscaping1.jpg" alt="Hardscaping Service" class="service-photo">
+                <div class="overlay">
+                    <p class="service-description">Create beautiful, durable outdoor structures with our hardscaping services.</p>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://example.com/hardscaping'">
+                        more info
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service: Lighting -->
+            <div class="service-item">
+                <div class="service-name">Lighting</div>
+                <img src="./assets/lighting1.jpg" alt="Lighting Service" class="service-photo">
+                <div class="overlay">
+                    <p class="service-description">Enhance your outdoor space with professional lighting installations.</p>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://example.com/lighting'">
+                        more info
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service: Irrigation -->
+            <div class="service-item">
+                <div class="service-name">Irrigation</div>
+                <img src="./assets/irrigation1.jpg" alt="Irrigation Service" class="service-photo">
+                <div class="overlay">
+                    <p class="service-description">Ensure your landscape thrives with efficient irrigation systems.</p>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://example.com/irrigation'">
+                        more info
+                    </button>
+                </div>
+            </div>
+        </div>
+        <h1 class="section_text_p3">Why Work With Us?</h1>
+        <p class="section_text_p4">
+            At Nicos Landscape, we understand that your outdoor space is an extension of your home, and we’re here to help you make it as beautiful and functional as possible. Based in Madison County, Mississippi, we are deeply rooted in the local community and familiar with the unique landscape and climate of the area. This local expertise allows us to offer customized solutions that are not only aesthetically pleasing but also sustainable and well-suited to the environment. As a small, owner-operated business, we pride ourselves on providing personalized attention and a level of care that larger companies simply can't match. When you work with Nicos Landscape, you're not just hiring a landscaper; you're partnering with someone who is committed to turning your vision into reality with professionalism, reliability, and a true passion for landscaping. Whether you need regular lawn maintenance or a complete outdoor transformation, we're here to ensure your satisfaction every step of the way        </p>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h1 class="section_text_p3">Contact Us</h1>
+        <div class="contact-info-upper-container">
+            <!-- Email Section -->
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+                <p><a href="mailto:nicoslandscaping.ms@gmail.com">nicoslandscaping.ms@gmail.com</a></p>
+            </div>
+        
+            <!-- Phone Section -->
+            <div class="contact-info-container">
+                <img src="assets/phone.png" alt="Phone icon" class="icon phone-icon">
+                <!-- Wrap the phone number in an <a> tag with the "tel:" protocol -->
+                <p><a href="tel:6015733940">601-927-7378</a></p>
+            </div>
+        </div>
+        <form action="/send" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+    
+            <div class="form-group">
+                <label for="message">What can we do for you?</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+    
+            <button type="submit" class="btn btn-color-2">Submit</button>
+        </form>
+    </section>
+    
+    <!-- FOOTER SECTION -->
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links"> 
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Frank Cardona. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
