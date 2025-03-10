@@ -377,7 +377,6 @@ hamburger-icon span:first-child {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
-    width: 100%;
     transition: opacity 0.5s ease;
     opacity: 0;
     padding: 20px;
